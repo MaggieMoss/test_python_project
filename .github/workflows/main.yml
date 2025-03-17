@@ -20,4 +20,4 @@ jobs:
         pip install pyrefly
     - name: Analysing the code with pyrefly
       run: |
-        pyrefly $(git ls-files '*.py')
+        pyrefly -c pyrefly.toml $(git ls-files '*.py')
