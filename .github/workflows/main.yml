@@ -5,6 +5,10 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
